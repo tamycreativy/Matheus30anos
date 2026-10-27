@@ -87,6 +87,9 @@ button,input{font:inherit;color:inherit}
   -webkit-backdrop-filter:blur(2.2cqw) saturate(1.1);backdrop-filter:blur(2.2cqw) saturate(1.1);background:rgba(255,255,255,.10);
   -webkit-mask:url(assets/fenda-mask.png) center/100% 100% no-repeat;mask:url(assets/fenda-mask.png) center/100% 100% no-repeat}
 
+/* nome deitado no meio da fenda, na tipografia da página de informações */
+.cover>img.nome{inset:auto;position:absolute;left:50%;top:50%;width:76cqw;height:auto;transform:translate(-50%,-50%) rotate(-90deg);pointer-events:none;user-select:none;-webkit-user-drag:none}
+
 /* puxador: desliza só dentro da fenda (de baixo para cima e de volta) */
 .pull{
   position:absolute;left:50%;top:83%;width:24%;aspect-ratio:820/1277;
@@ -175,6 +178,7 @@ button,input{font:inherit;color:inherit}
     <div class="cover" id="cover">
       <img src="assets/capa.webp" alt="" width="940" height="1672" decoding="async" fetchpriority="high">
       <div class="blur" aria-hidden="true"></div>
+      <img class="nome" src="assets/nome.webp" alt="Matheus 30 anos" width="989" height="120" decoding="async">
       <button class="pull" id="pull" type="button" role="slider" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Puxador: arraste para cima para abrir o convite"></button>
     </div>
   </div>
